@@ -15,8 +15,8 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('getdata', 'ExampleController@getData');
-$router->get('getdata/{type}', 'ExampleController@getData');
+$router->get('getdata', 'CoronaController@getData');
+$router->get('getdata/{type}', 'CoronaController@getData');
 
 
 $router->post('foo', function () {

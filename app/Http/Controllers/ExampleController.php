@@ -6,7 +6,7 @@ use http\Env\Request;
 
 ini_set('memory_limit', '1GB');
 
-class ExampleController extends Controller
+class CoronaController extends Controller
 {
 
     private $apiUrl = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/";
@@ -80,7 +80,7 @@ class ExampleController extends Controller
         $err = curl_error($curl);
 
         curl_close($curl);
-        
+
         if ($err) {
             return array('error' => true, 'message' => "cURL Error #:" . $err);
         }
